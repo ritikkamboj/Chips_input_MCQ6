@@ -32,7 +32,7 @@ function App() {
       <h1 className='heading'>Chips Input</h1>
       <input type="text" placeholder='Enter Your Text' className='input' onChange={(e) => setInput(e.target.value) } onKeyDown={(e)=>handleAddition(e)} value={input}   />
       <div className='dis-chip'>
-        {data.map((item,i)=> <div className='chip' key={item} >{item} <button onClick={()=> handleDelete(i)}>❌</button> </div>)}
+        { data.length ? data.map((item,i)=> <div className='chip' key={item} >{item} <button onClick={()=> handleDelete(i)}>❌</button> </div>) : <h2>No Chips</h2>}
 
       </div>
     </div>
